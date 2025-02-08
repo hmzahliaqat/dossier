@@ -12,7 +12,7 @@
                         <li class="filter-item"><button data-filter-btn>Applications</button></li>
                         <li class="filter-item"><button data-filter-btn>Web Development</button></li>
                     </ul> -->
-
+    <p class="text-white p-2">Few examples from my work</p>
     <div class="filter-select-box">
       <button class="filter-select" data-select>
         <div class="select-value" data-select-value>Select Category</div>
@@ -31,6 +31,42 @@
     </div>
 
     <ul class="project-list">
+      <!-- charter -->
+      <li class="project-item active" data-filter-item data-category="web development">
+        <a href="https://charter-center.com/" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+
+            <img src="@/assets/projects/charter.jpeg" alt="orizon" loading="lazy" />
+          </figure>
+
+          <h3 class="project-title">Charter</h3>
+          <p class="project-category">Web Development</p>
+        </a>
+      </li>
+
+      <!-- Survey Rocks  -->
+      <li class="project-item active" data-filter-item data-category="web design">
+        <a
+          href="https://acc-app.surveyrocks.io/cb473193-e283-406f-8552-84ecc105f746"
+          target="_blank"
+        >
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+
+            <img src="@/assets/projects/survey-rocks.jpeg" alt="fundo" loading="lazy" />
+          </figure>
+
+          <h3 class="project-title">Survey Rocks</h3>
+          <p class="project-category">Web Development</p>
+        </a>
+      </li>
+
+      <!--Quantum Spin  -->
       <li class="project-item active" data-filter-item data-category="web development">
         <a href="#">
           <figure class="project-img">
@@ -44,36 +80,6 @@
 
           <h3 class="project-title">Quantum Spin</h3>
           <p class="project-category">Web Development</p>
-        </a>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="web development">
-        <a href="#">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy" />
-          </figure>
-
-          <h3 class="project-title">Orizon</h3>
-          <p class="project-category">Web Development</p>
-        </a>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="web design">
-        <a href="#">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy" />
-          </figure>
-
-          <h3 class="project-title">Fundo</h3>
-          <p class="project-category">Web Design</p>
         </a>
       </li>
 
