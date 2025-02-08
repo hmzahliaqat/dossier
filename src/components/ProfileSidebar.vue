@@ -37,11 +37,13 @@ const { isUserSidebar, isAdminSidebar } = useModuleSettings()
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">hmzah.liaqat@gmail.com</a>
+              <a href="mailto:hmzah.liaqat@gmail.com" class="contact-link"
+                >hmzah.liaqat@gmail.com</a
+              >
             </div>
           </li>
 
-          <li class="contact-item">
+          <!-- <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
@@ -51,7 +53,7 @@ const { isUserSidebar, isAdminSidebar } = useModuleSettings()
 
               <a href="tel:+12133522795" class="contact-link">+92 348 8926639</a>
             </div>
-          </li>
+          </li> -->
 
           <li class="contact-item">
             <div class="icon-box">
