@@ -5,11 +5,11 @@
   </header>
   <section class="projects">
     <!-- <ul class="filter-list">
-                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-                        <li class="filter-item"><button data-filter-btn>Web Design</button></li>
-                        <li class="filter-item"><button data-filter-btn>Applications</button></li>
-                        <li class="filter-item"><button data-filter-btn>Web Development</button></li>
-                    </ul> -->
+          <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+          <li class="filter-item"><button data-filter-btn>Web Design</button></li>
+          <li class="filter-item"><button data-filter-btn>Applications</button></li>
+          <li class="filter-item"><button data-filter-btn>Web Development</button></li>
+        </ul> -->
 
     <!-- mobile category select -->
     <!-- <div class="filter-select-box">
