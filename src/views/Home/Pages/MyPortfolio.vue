@@ -1,10 +1,8 @@
 <script setup></script>
-
 <template>
   <header>
     <h2 class="h2 article-title">Portfolio</h2>
   </header>
-
   <section class="projects">
     <!-- <ul class="filter-list">
                         <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
@@ -12,8 +10,9 @@
                         <li class="filter-item"><button data-filter-btn>Applications</button></li>
                         <li class="filter-item"><button data-filter-btn>Web Development</button></li>
                     </ul> -->
-    <p class="text-white p-2">Few examples from my work</p>
-    <div class="filter-select-box">
+
+    <!-- mobile category select -->
+    <!-- <div class="filter-select-box">
       <button class="filter-select" data-select>
         <div class="select-value" data-select-value>Select Category</div>
 
@@ -28,7 +27,7 @@
         <li class="select-item"><button data-select-item>Applications</button></li>
         <li class="select-item"><button data-select-item>Web Development</button></li>
       </ul>
-    </div>
+    </div> -->
 
     <ul class="project-list">
       <!-- charter -->
@@ -39,10 +38,26 @@
               <ion-icon name="eye-outline"></ion-icon>
             </div>
 
-            <img src="@/assets/projects/charter.jpeg" alt="orizon" loading="lazy" />
+            <img src="@/assets/projects/charter.jpeg" alt="charter" loading="lazy" />
           </figure>
 
           <h3 class="project-title">Charter</h3>
+          <p class="project-category">Web Development</p>
+        </a>
+      </li>
+
+      <!-- Interapptive -->
+      <li class="project-item active" data-filter-item data-category="applications">
+        <a href="https://redesign.interapptive.news/" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+
+            <img src="@/assets/projects/interapptive.jpeg" alt="interapptive" loading="lazy" />
+          </figure>
+
+          <h3 class="project-title">Interapptive</h3>
           <p class="project-category">Web Development</p>
         </a>
       </li>
@@ -58,7 +73,7 @@
               <ion-icon name="eye-outline"></ion-icon>
             </div>
 
-            <img src="@/assets/projects/survey-rocks.jpeg" alt="fundo" loading="lazy" />
+            <img src="@/assets/projects/survey-rocks.jpeg" alt="survey" loading="lazy" />
           </figure>
 
           <h3 class="project-title">Survey Rocks</h3>
@@ -75,7 +90,7 @@
                 <ion-icon name="eye-outline"></ion-icon>
               </div>
             </a>
-            <img src="@/assets/projects/quantumSpin-home.jpg" alt="finance" loading="lazy" />
+            <img src="@/assets/projects/quantumSpin-home.jpg" alt="Quantum" loading="lazy" />
           </figure>
 
           <h3 class="project-title">Quantum Spin</h3>
@@ -83,41 +98,7 @@
         </a>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="applications">
-        <a href="#">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img
-              src="https://i.postimg.cc/dtpXxNGb/project-4.png"
-              alt="brawlhalla"
-              loading="lazy"
-            />
-          </figure>
-
-          <h3 class="project-title">Brawlhalla</h3>
-          <p class="project-category">Applications</p>
-        </a>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="web design">
-        <a href="#">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy" />
-          </figure>
-
-          <h3 class="project-title">DSM.</h3>
-          <p class="project-category">Web Design</p>
-        </a>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="web design">
+      <!-- <li class="project-item active" data-filter-item data-category="web design">
         <a href="#">
           <figure class="project-img">
             <div class="project-item-icon-box">
@@ -130,56 +111,7 @@
           <h3 class="project-title">Metaspark</h3>
           <p class="project-category">Web Design</p>
         </a>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="web development">
-        <a href="#">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy" />
-          </figure>
-
-          <h3 class="project-title">Summary</h3>
-          <p class="project-category">Web Development</p>
-        </a>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="applications">
-        <a href="#">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img
-              src="https://i.postimg.cc/rw2j4B1w/project-8.jpg"
-              alt="task manager"
-              loading="lazy"
-            />
-          </figure>
-
-          <h3 class="project-title">Task Manager</h3>
-          <p class="project-category">Applications</p>
-        </a>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="web development">
-        <a href="#">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-
-            <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy" />
-          </figure>
-
-          <h3 class="project-title">Arrival</h3>
-          <p class="project-category">Web Development</p>
-        </a>
-      </li>
+      </li> -->
     </ul>
   </section>
 </template>

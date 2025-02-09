@@ -1,5 +1,43 @@
 <script setup>
+import { ref } from 'vue'
+import axios from 'axios'
 
+const form = ref({
+  fullname: '',
+  email: '',
+  message: '',
+})
+
+const responseMessage = ref('')
+const isSubmitting = ref(false)
+
+const sendEmail = async () => {
+  isSubmitting.value = true
+  responseMessage.value = ''
+
+  try {
+    const formData = new FormData()
+    formData.append('name', form.value.fullname)
+    formData.append('email', form.value.email)
+    formData.append('message', form.value.message)
+
+    const response = await axios.post('/email.php', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    })
+
+    if (response.data.status === 'success') {
+      responseMessage.value = 'Message sent successfully!'
+      form.value = { fullname: '', email: '', message: '' } // Reset form
+    } else {
+      responseMessage.value = response.data.message
+    }
+  } catch (error) {
+    console.error('Error sending email:', error)
+    responseMessage.value = 'An error occurred. Please try again.'
+  } finally {
+    isSubmitting.value = false
+  }
+}
 </script>
 
 <template>
@@ -24,6 +62,7 @@
     <form action="#" class="form" data-form>
       <div class="input-wrapper">
         <input
+          v-model="form.fullname"
           type="text"
           name="fullname"
           class="form-input"
@@ -32,6 +71,7 @@
           data-form-input
         />
         <input
+          v-model="form.email"
           type="email"
           name="email"
           class="form-input"
@@ -42,6 +82,7 @@
       </div>
 
       <textarea
+        v-model="form.message"
         name="message"
         class="form-input"
         placeholder="Your Message"
@@ -49,7 +90,7 @@
         data-form-input=""
       ></textarea>
 
-      <button class="form-btn" type="submit" disabled data-form-btn>
+      <button @click="sendEmail()" class="form-btn" type="button" data-form-btn>
         <ion-icon name="paper-plane"></ion-icon>
         <span>Send Message</span>
       </button>
@@ -57,6 +98,4 @@
   </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
