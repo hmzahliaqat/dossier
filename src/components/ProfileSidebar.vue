@@ -94,4 +94,10 @@ const toggleSidebar = () => {
   </aside>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 1250px) {
+  .sidebar-info-more {
+    display: none;
+  }
+}
+</style>
