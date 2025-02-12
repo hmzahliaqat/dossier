@@ -1274,10 +1274,6 @@ textarea.form-input::-webkit-realizer {
     font-size: 18px;
   }
 
-  main {
-    margin-top: 60px;
-    margin-bottom: 100px;
-  }
 
   .sidebar {
     margin-bottom: 30px;
@@ -1595,9 +1591,6 @@ textarea.form-input::-webkit-realizer {
     box-shadow: var(--shadow5);
   }
 
-  main {
-    margin-bottom: 60px;
-  }
 
   .main-content {
     position: relative;
@@ -1686,12 +1679,15 @@ textarea.form-input::-webkit-realizer {
   }
 
   main {
-    max-width: 1200px;
+    max-width: auto;
     margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 25px;
+    padding-right: 2%;
+    margin-top: 60px;
+    margin-bottom: 100px;
   }
 
   .main-content {
@@ -1761,6 +1757,7 @@ textarea.form-input::-webkit-realizer {
   }
 
   .timeline-text {
-    max-width: 700px;
+    max-width: auto;
+    padding-right: 2%;
   }
 }
