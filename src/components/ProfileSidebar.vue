@@ -11,7 +11,7 @@ const toggleSidebar = () => {
     <div>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <img src="https://i.postimg.cc/JzBWVhW4/my-avatar.png" alt="avatar" width="80" />
+          <img src="@/assets/profile/profile2.jpeg" class="rounded-md" alt="avatar" width="80" />
         </figure>
 
         <div class="info-content">

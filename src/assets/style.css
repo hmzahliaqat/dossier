@@ -1274,9 +1274,9 @@ textarea.form-input::-webkit-realizer {
     font-size: 18px;
   }
 
-
   .sidebar {
     margin-bottom: 30px;
+    margin-left: 10px;
   }
 
   .sidebar.active {
@@ -1590,7 +1590,6 @@ textarea.form-input::-webkit-realizer {
     width: 950px;
     box-shadow: var(--shadow5);
   }
-
 
   .main-content {
     position: relative;

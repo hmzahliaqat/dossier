@@ -28,7 +28,7 @@ import ThirdParty from '../../../components/partials/ThirdParty.vue'
         teams and tackle complex problems.
       </p>
       <h4 style="font-weight: bolder; float: right; font-style: italic">
-        ~It's a pleasure to make your acquaintance. 😊
+        ~It's a pleasure to make your acquaintance. <span class="hidden md:inline-flex"> 😊 </span>
       </h4>
       <br />
     </section>
