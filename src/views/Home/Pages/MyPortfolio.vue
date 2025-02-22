@@ -81,23 +81,6 @@
         </a>
       </li>
 
-      <!--Quantum Spin  -->
-      <li class="project-item active" data-filter-item data-category="web development">
-        <a href="#">
-          <figure class="project-img">
-            <a href="https://palevioletred-alpaca-194376.hostingersite.com/" target="_blank">
-              <div class="project-item-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
-              </div>
-            </a>
-            <img src="@/assets/projects/quantumSpin-home.jpg" alt="Quantum" loading="lazy" />
-          </figure>
-
-          <h3 class="project-title">Quantum Spin</h3>
-          <p class="project-category">Web Development</p>
-        </a>
-      </li>
-
       <!-- <li class="project-item active" data-filter-item data-category="web design">
         <a href="#">
           <figure class="project-img">
