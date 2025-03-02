@@ -62,6 +62,22 @@
         </a>
       </li>
 
+      <!-- Kirby -->
+      <li class="project-item active" data-filter-item data-category="applications">
+        <a href="https://kirbydrive.com/" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+
+            <img src="@/assets/projects/kirby.jpeg" alt="Kirby" loading="lazy" />
+          </figure>
+
+          <h3 class="project-title">KirbyDrive</h3>
+          <p class="project-category">Web Development</p>
+        </a>
+      </li>
+
       <!-- Survey Rocks  -->
       <li class="project-item active" data-filter-item data-category="web design">
         <a
