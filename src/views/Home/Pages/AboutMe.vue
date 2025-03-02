@@ -10,11 +10,10 @@ import ThirdParty from '../../../components/partials/ThirdParty.vue'
     </header>
 
     <section class="about-text">
-      <p>My name is Hamza Liaqat.</p>
       <p>
-        I am a Software Engineer and developer with 2+ year of experience with a keen focus on
-        Laravel, Vue and Vuex with deep understanding of MySQL's storage engines, indexing
-        mechanisms, and query optimization techniques.
+        Software Engineer and developer with 2+ year of experience with a keen focus on Laravel, Vue
+        and Vuex with deep understanding of MySQL's storage engines, indexing mechanisms, and query
+        optimization techniques.
       </p>
       <p>
         Self-reliant with proficiency in managing end-to-end project responsibilities having a
