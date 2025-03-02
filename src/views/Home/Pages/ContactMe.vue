@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import axios from 'axios'
+import { useToast } from 'vue-toast-notification'
+import 'vue-toast-notification/dist/theme-sugar.css'
 
 const form = ref({
   fullname: '',
@@ -10,6 +12,7 @@ const form = ref({
 
 const responseMessage = ref('')
 const isSubmitting = ref(false)
+const $toast = useToast()
 
 const sendEmail = async () => {
   isSubmitting.value = true
@@ -21,9 +24,13 @@ const sendEmail = async () => {
     formData.append('email', form.value.email)
     formData.append('message', form.value.message)
 
-    const response = await axios.post('/email.php', formData, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    })
+    const response = await axios.post(
+      'https://palevioletred-alpaca-194376.hostingersite.com/api/dossier/send-mail',
+      formData,
+      {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      },
+    )
 
     if (response.data.status === 'success') {
       responseMessage.value = 'Message sent successfully!'
@@ -31,7 +38,13 @@ const sendEmail = async () => {
     } else {
       responseMessage.value = response.data.message
     }
+    $toast.success('Email Sent!', {
+      position: 'top-right',
+    })
   } catch (error) {
+    $toast.error('Something Went Wrong!', {
+      position: 'top-right',
+    })
     console.error('Error sending email:', error)
     responseMessage.value = 'An error occurred. Please try again.'
   } finally {
