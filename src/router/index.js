@@ -8,11 +8,16 @@ import ContactMe from '@/views/Home/Pages/ContactMe.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
   routes: [
     {
       path: '',
       component: HomeView,
       children: [
+        {
+          path: '',
+          redirect: '/about',
+        },
         {
           path: '/about',
           name: 'about',

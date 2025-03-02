@@ -13,7 +13,7 @@ const form = ref({
 const responseMessage = ref('')
 const isSubmitting = ref(false)
 const $toast = useToast()
-
+const errors = ref([])
 const sendEmail = async () => {
   isSubmitting.value = true
   responseMessage.value = ''
@@ -41,7 +41,18 @@ const sendEmail = async () => {
     $toast.success('Email Sent!', {
       position: 'top-right',
     })
+
+    form.value = {
+      fullname: '',
+      email: '',
+      message: '',
+    }
   } catch (error) {
+    console.log(error.response)
+    console.log(errors.value)
+
+    errors.value = error.response?.data?.errors
+
     $toast.error('Something Went Wrong!', {
       position: 'top-right',
     })
@@ -74,41 +85,61 @@ const sendEmail = async () => {
 
     <form action="#" class="form" data-form>
       <div class="input-wrapper">
-        <input
-          v-model="form.fullname"
-          type="text"
-          name="fullname"
-          class="form-input"
-          placeholder="Full name"
-          required
-          data-form-input
-        />
-        <input
-          v-model="form.email"
-          type="email"
-          name="email"
-          class="form-input"
-          placeholder="Email Address"
-          required
-          data-form-input
-        />
+        <div class="flex flex-col">
+          <input
+            v-model="form.fullname"
+            type="text"
+            name="fullname"
+            class="form-input"
+            placeholder="Full name"
+            required
+            data-form-input
+          />
+          <span v-if="errors.name" class="text-red-500 text-sm mt-3 ml-2">Name is required</span>
+        </div>
+
+        <div class="flex flex-col">
+          <input
+            v-model="form.email"
+            type="email"
+            name="email"
+            class="form-input"
+            placeholder="Email Address"
+            required
+            data-form-input
+          />
+          <span v-if="errors.email" class="text-red-500 text-sm mt-3 ml-2">Email is required</span>
+        </div>
       </div>
 
-      <textarea
-        v-model="form.message"
-        name="message"
-        class="form-input"
-        placeholder="Your Message"
-        required
-        data-form-input=""
-      ></textarea>
+      <div class="flex flex-col mt-4">
+        <textarea
+          v-model="form.message"
+          name="message"
+          class="form-input"
+          placeholder="Your Message"
+          required
+          data-form-input=""
+        ></textarea>
+        <span v-if="errors.message" class="text-red-500 text-sm ml-2">Message is required</span>
+      </div>
 
-      <button @click="sendEmail()" class="form-btn" type="button" data-form-btn>
+      <button @click="sendEmail()" class="form-btn mt-4" type="button" data-form-btn>
         <ion-icon name="paper-plane"></ion-icon>
-        <span>Send Message</span>
+        <span>{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
       </button>
+
+      <div
+        v-if="responseMessage"
+        class="mt-4 text-center"
+        :class="{ 'text-green-500': responseMessage.includes('success') }"
+      >
+        {{ responseMessage }}
+      </div>
     </form>
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* You can add any additional custom styles here if needed */
+</style>
