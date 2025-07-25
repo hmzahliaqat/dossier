@@ -11,7 +11,7 @@ import ThirdParty from '../../../components/partials/ThirdParty.vue'
 
     <section class="about-text">
       <p>
-        Software Engineer and developer with 2+ year of experience with a keen focus on Laravel, Vue
+        Software Engineer and developer with 3+ year of experience with a keen focus on Laravel, Vue
         and Vuex with deep understanding of MySQL's storage engines, indexing mechanisms, and query
         optimization techniques.
       </p>
